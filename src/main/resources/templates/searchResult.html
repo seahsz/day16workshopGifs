@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIF Result</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 data-th-text="${search_url}"></h1>
+
+    <hr>
+
+    <div data-th-if="${#lists.isEmpty(gif_url_list)}">
+        <h2> There are no results for your search <span data-th-text="${query}" class="underline"></span> </h1>
+    </div>
+
+    <div data-th-unless="${#lists.isEmpty(gif_url_list)}">
+        <h2> Your search results for <span data-th-text="${query}" class="underline"></span> </h1>
+
+            <div class="container">
+                <img data-th-each="gif_url : ${gif_url_list}" data-th-src="${gif_url}">
+            </div>
+    </div>
+
+</body>
+
+</html>

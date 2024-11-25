@@ -1,0 +1,14 @@
+.container {
+    display: flex; /* Enables flexbox layout */
+    flex-wrap: wrap; /* Allows wrapping to the next row if there's not enough space */
+    gap: 10px; /* Adds space between images */
+}
+
+.container img {
+    height: auto; /* Ensures images maintain aspect ratio */
+    max-width: 100%; /* Prevents images from overflowing */
+}
+
+.underline {
+    text-decoration: underline;
+}
